@@ -1,0 +1,10 @@
+version: '2'
+
+services:
+  puppetserver-extra-gems:
+    build: .
+
+  puppetserver:
+    image: puppet/puppetserver
+    volumes_from:
+      - puppetserver-extra-gems
